@@ -12,6 +12,8 @@ public class KnightsTour
     private HashMap<Integer,int[]> moves;
     Scanner myObj = new Scanner(System.in);
     private int num = 1;
+    private int row = (int) (Math.random()*8);
+    private int col = (int) (Math.random()*8);
     /**
      * Constructor for objects of class KnightsTour
      */
@@ -77,6 +79,8 @@ public class KnightsTour
         int playerChoice = myObj.nextInt();
         int[] tempArr = moves.get(playerChoice);
         board[tempArr[0]][tempArr[1]] = num;
+        row = tempArr[0];
+        col = tempArr[1];
         System.out.println(board[tempArr[0]][tempArr[1]]);
     }
     public void getHashmap(){
